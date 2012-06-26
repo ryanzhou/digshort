@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>dig +short</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+	
+	<script src="javascripts/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			<div class="twelve columns">
+				<h1>dig +short</h1>
+				<p>Easy-to-use dig API. Equivalent to "dig +short".</p>
+				<hr />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="eight columns">
+				<h4>How to use it?</h4>
+				<p>
+				<pre>http://digshort.net/[domain]/[record].[format]</pre>
+				</p>
+				<h4>Supported formats</h4>
+				<p>Currently JSON and plain text are supported.</p>
+				
+				<h4>Examples</h4>
+				<p><pre>
+$ curl http://digshort.net/example.com/A.json
+
+["192.0.43.10"]</pre></p>
+				<p><pre>
+$ curl http://digshort.net/google.com/A.txt
+
+74.125.237.98
+74.125.237.99
+74.125.237.100
+74.125.237.101
+74.125.237.102
+74.125.237.103
+74.125.237.104
+74.125.237.105
+74.125.237.110
+74.125.237.96
+74.125.237.97</pre></p>
+				<p><pre>
+$ curl http://digshort.net/gmail.com/MX.json
+
+["10 alt1.gmail-smtp-in.l.google.com.","20 alt2.gmail-smtp-in.l.google.com.","30 alt3.gmail-smtp-in.l.google.com.","40 alt4.gmail-smtp-in.l.google.com.","5 gmail-smtp-in-v4v6.l.google.com."]</pre></p>
+				<p><pre>
+$ curl http://digshort.net/1.2.+.rp.secret-wg.org/TXT.txt
+
+;; Truncated, retrying in TCP mode.
+"This DNS message (including the RR(s) in the additional section) is confidential, proprietary, may be subject to copyright and legal privilege and no related rights are waived." "If you are not the intended recipient or its agent, any review, dissemination, distribution or copying of this DNS message. or any of its content is strictly prohibited and may be unlawful." "All messages may be monitored as permitted by applicable law and regulations and our policies to protect our business." "DNS messages are not secure and you are deemed to have accepted any risk if you communicate with us using DNS." "If received in error, please notify us immediately and delete the DNS message (and any of its sections) from any computer or any storage medium without printing a copy."
+"3"</pre></p>
+
+			</div>
+
+			<div class="four columns">			
+				<h5>Credit</h5>
+				<p>Made and maintained by Ryan (aka Zhou Tong).</p>
+				<p>Contact me at <a href="mailto:digshort@zhoutong.com">digshort@zhoutong.com</a></p>
+				<hr>
+				<h5>Powered By</h5>
+				<ul>
+					<li>Ruby</li>
+					<li>Sinatra</li>
+					<li>dig</li>
+					<li>Heroku</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- container -->
+
+
+
+
+	<!-- Included JS Files -->
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+
+</body>
+</html>

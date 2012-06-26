@@ -1,0 +1,29 @@
+body {
+	padding: 40px 0;
+}
+
+pre {
+	border: 1px solid #CCC;
+	background: #FCFCFC;
+	padding: 10px;
+	font-size: 15px;
+	font-family: 'Bitstream Vera Sans Mono', 'lucida console', "monaco", sans-serif;
+	white-space: pre-wrap;
+}
+
+ul {
+	padding-left: 20px;
+	list-style: disc;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+h4 {
+	margin-top: 10px;
+}
